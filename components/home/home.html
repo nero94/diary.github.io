@@ -1,0 +1,38 @@
+<section class="home-section">
+
+    <aside class="nav-left">
+        <div>
+            <h3 class="main-title">DIARY APP</h3>
+            <h5 class="subtitle">Comment with no sense</h5>
+        </div>
+    </aside>
+
+    <md-card class="items-card">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Items</span>
+            </md-card-title-text>
+        </md-card-title>
+
+        <md-card-content>
+            <form class="item-form" ng-submit="$ctrl.addItem()">
+                <input type="text" placeholder="Type name here..." ng-model="$ctrl.newItemName">
+                <md-button class="add-button" ng-click="$ctrl.addItem()" ng-disabled="!$ctrl.newItemName.trim()">Add new</md-button>
+            </form>
+            <md-list flex>
+                <md-list-item class="md-4-line" ng-repeat="item in $ctrl.items | orderBy: 'timestamp'" ng-click="$ctrl.setActiveItem(item)">
+                    <diary-item item="item" active="$ctrl.activeItem === item" remove-item-fn="$ctrl.removeItem(item)"></diary-item>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+
+    </md-card>
+
+    <item-comments
+            ng-if="$ctrl.activeItem"
+            item="$ctrl.activeItem"
+            index="$ctrl.items.indexOf($ctrl.activeItem)"
+            update-storage-fn="$ctrl.updateLocalStorageData()">
+    </item-comments>
+
+</section>

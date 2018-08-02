@@ -1,0 +1,29 @@
+diary-item {
+    width: 100%;
+}
+
+diary-item .active-marker {
+    height: 100%;
+    width: 5px;
+    background-color: #ff2f5a;
+    position: absolute;
+    left: 0;
+}
+
+diary-item .counter {
+    display: inline-block;
+    margin-left: 20px;
+    background-color: #27ccc0;
+    color: #ffffff;
+    border-radius: 95px;
+    min-width: 30px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+}
+
+diary-item .delete-button {
+    float: right;
+    color: #ff2f5a;
+    border: 1px solid #ff2f5a;
+}

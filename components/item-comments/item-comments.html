@@ -1,0 +1,26 @@
+<md-card>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Comments #{{$ctrl.index + 1}}</span>
+        </md-card-title-text>
+    </md-card-title>
+
+    <md-card-content>
+        <md-list class="md-dense" flex>
+            <md-list-item class="md-4-line" ng-repeat="comment in $ctrl.item.comments | orderBy : 'timestamp'">
+                <img src="https://us.v-cdn.net/6025127/uploads/userpics/749/p5E5VNBV9PGDL.jpeg" class="md-avatar" />
+                <div class="md-list-item-text md-body-1">
+                    <p class="">{{comment.text}}</p>
+                </div>
+                <md-divider ng-if="$index !== $ctrl.item.comments.length - 1"></md-divider>
+            </md-list-item>
+        </md-list>
+
+        <div layout="row" class="comment-input-container">
+            <img src="https://us.v-cdn.net/6025127/uploads/userpics/749/p5E5VNBV9PGDL.jpeg" />
+            <textarea ng-model="$ctrl.newCommentText" ng-keypress="$ctrl.handleKeyPress($event)"></textarea>
+        </div>
+
+    </md-card-content>
+
+</md-card>

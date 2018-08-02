@@ -1,0 +1,22 @@
+item-comments {
+    width: 35%;
+    min-width: 370px;
+}
+
+item-comments .comment-input-container {
+    width: 100%;
+    min-height: 50px;
+}
+
+item-comments .comment-input-container img {
+    height: 36px;
+    width: 36px;
+    margin: 6px;
+}
+
+item-comments .comment-input-container textarea {
+    min-height: 80px;
+    width: 100%;
+    min-width: 200px;
+    max-height: 300px;
+}

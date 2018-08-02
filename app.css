@@ -1,0 +1,53 @@
+input[type=text], textarea {
+    padding: 0 10px;
+    margin: 6px 8px;
+    box-sizing: border-box;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    min-height: 36px;
+    line-height: 32px;
+}
+
+.nav-left {
+    background-color: #2b2f3e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 15%;
+}
+
+.main-title {
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #7f7f7f;
+}
+
+.items-card {
+    width: 35%;
+    min-width: 370px;
+}
+
+.add-button {
+    background-color: #27ccc0;
+}
+
+.item-form {
+    text-align: center;
+}
+
+.item-form > input {
+    width: 60%;
+}
+
+.item-form > md-button {
+    width: 30%;
+}
+
+.home-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start
+}

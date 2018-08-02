@@ -1,0 +1,7 @@
+<span ng-show="$ctrl.active" class="active-marker"></span>
+<div>
+    <span class="md-title">{{$ctrl.item.name}}</span>
+    <span class="counter">{{$ctrl.item.comments.length}}</span>
+    <md-button class="delete-button" ng-click="$ctrl.removeItemFn()">Delete</md-button>
+</div>
+<md-divider></md-divider>
